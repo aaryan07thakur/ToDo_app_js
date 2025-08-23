@@ -111,6 +111,7 @@ button{
 }
 
 .taskItem{
+    width: 100%;
     display: flex;
     background-color: var(--secondaryBackground);
     padding: 10px;
@@ -119,10 +120,20 @@ button{
     align-items: center;
 }
 
-.task{
+.task {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.task input{
+    width: 20px;
+    height: 20px;
+}
+
+.task.completed p {
+  text-decoration: line-through;
+  color: var(--teal);
 }
 
 .taskItem img{

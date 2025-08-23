@@ -9,9 +9,15 @@ const addTask=()=>{
         taskInput.value="";
         updateTasksList();
     }
-    console.log(tasks);
+    // console.log(tasks);
 
 };
+// task complete vayo ani check gayo vnae ture print hun x if not false
+const toggleTastComplete= (index)=>{
+    tasks[index].completed=!tasks[index].completed;
+    updateTasksList();
+    // console.log({tasks})
+}
 
 const updateTasksList=()=>{
     const taskList=document.getElementById('task-list')
@@ -22,7 +28,7 @@ const updateTasksList=()=>{
 
         listItem.innerHTML=`
         <div class="taskItem">
-            <div class="task ${task.completed ? "Completed":" "}">
+            <div class="task ${task.completed ? "completed":" "}">
               <input type="checkbox" class="checkbox" 
               ${task.completed ? "checked" :""}/>
               <p> ${task.text}</P>
