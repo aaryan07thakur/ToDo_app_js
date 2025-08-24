@@ -22,7 +22,17 @@ const toggleTastComplete= (index)=>{
 const deleteTasK=(index)=>{
     tasks.splice(index,1);
     updateTasksList();
-}
+};
+
+//edit task
+const editTask=(index)=>{
+    const taskInputs =document.getElementById("taskInput");
+    taskInputs.value=tasks[index].text
+
+    tasks.splice(index,1);
+    updateTasksList();
+
+};
 
 const updateTasksList=()=>{
     const taskList=document.getElementById('task-list')
@@ -40,7 +50,9 @@ const updateTasksList=()=>{
             </div>
             <div class="icons">
                 <img src="./img/bin.png" onClick="deleteTasK(${index})" />
-                <img src="./img/edit.png" onClick="editTasK(${index})" />
+                <img src="./img/edit.png" onClick="editTask(${index})" />
+
+                
             </div>
         </div>
         `;
@@ -51,7 +63,7 @@ const updateTasksList=()=>{
     });
 }
 
-document.getElementById("newTak").addEventListener('click',function(e){
+document.getElementById("newTask").addEventListener('click',function(e){
     e.preventDefault()
 
     addTask();
