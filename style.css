@@ -43,11 +43,11 @@ body{
 }
 
 #progress{
-    width: 50%;
+    width: 0%;     /* start with empty*/
     height: 10px;
     background-color: var(--teal);
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: width 0.3s ease;
 }
 
 #numbers{
@@ -68,6 +68,7 @@ body{
     background-color: var(--secondaryBackground);
     border-radius: 20-x;
     margin-top: 20px;
+    
 }
 
 
