@@ -17,6 +17,11 @@ const toggleTastComplete= (index)=>{
     tasks[index].completed=!tasks[index].completed;
     updateTasksList();
     // console.log({tasks})
+};
+//delete task
+const deleteTasK=(index)=>{
+    tasks.splice(index,1);
+    updateTasksList();
 }
 
 const updateTasksList=()=>{
